@@ -1,2 +1,2 @@
-# RabbitMQ-Socket-Demo
+# RabbitMQ-SocketIO-Demo
 Use Socket-IO and RabbitMQ
