@@ -7,6 +7,8 @@ const connetServerPromise = new Promise(resolve => {
 });
 
 connetServerPromise.then(socket => {
+  process.send("Client is connected to server");
+    
   socket.on(infoChannelName, data => console.log(new Date(), data));
 
   //Send new request

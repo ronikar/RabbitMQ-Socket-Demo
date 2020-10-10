@@ -29,4 +29,4 @@ io.on("connection", socket => {
   socket.on(newTaskChannelName, data => rpcChannel.newTask(data).then(id => TasksMap.set(id, socket.id)));
 });
 
-handler.listen(port);
+handler.listen(port, () => process.send("Server is up"));

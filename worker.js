@@ -10,7 +10,7 @@ amqp.connect("amqp://localhost", (error0, connection) => {
     channel.assertQueue(queueName, { durable: true });
     channel.prefetch(1);
 
-    console.log("Worker is waiting for tasks");
+    process.send("Worker is ready");
 
     channel.consume(queueName, msg => {
       const n = JSON.parse(msg.content.toString());
